@@ -1,1 +1,539 @@
-my repo
+<!DOCTYPE html>
+
+<html lang="en">
+<title>Tourism website</title>
+<head>
+
+
+
+    <style>
+        .navbar-item{
+            font-size: 25px!important;
+        }
+
+        .nav-item{
+            
+            font-size: 25px!important;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            font-style: italic;
+        }
+
+        .carousel-slide {
+            display: flex;
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height:  900px;
+        }
+
+
+
+
+
+
+        .card-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+
+      .card {
+          width: 300px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          overflow: hidden;
+      }
+
+      .card img {
+          width: 100%;
+          height: 300px;
+        
+      }
+
+      .card-content {
+          padding: 20px;
+      }
+
+      .card-content h3 {
+          margin-top: 0;
+      }
+
+      .card-content p {
+          margin-bottom: 15px;
+      }
+
+      .card-content button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      .card-content button:hover {
+          background-color: #0056b3;
+      }
+
+
+
+     .error{
+        color: red;
+     }
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical exam</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand  mx-5" href="#"><img src="images (5).jfif" alt=""   height="20%" width="50%"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-5">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item mx-5">
+                <a class="nav-link active" aria-current="page" href="#">About</a>
+              </li>
+
+              <li class="nav-item mx-5">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown mx-5">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu   "  aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-5">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+  
+
+    
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="download (7).jfif" alt="Image 1" height="700"  width="100%" >
+            <img src="download (9).jfif" alt="Image 2" height="700" width="100%">
+            <img src="download (8).jfif" alt="Image 3" height="700"width="100%">
+        </div>
+    </div>
+
+
+    
+
+
+
+
+    <script src="jquery-3.7.1.min (4).js"></script>
+    <script>
+      $(document).ready(function() {
+        var slideIndex = 0;
+        carousel();
+    
+        function carousel() {
+          var slides = $('.carousel-slide img');
+          slides.hide(); 
+          slides.eq(slideIndex).show(); 
+          slideIndex++;
+          if (slideIndex >= slides.length) {
+            slideIndex = 0; 
+          }
+          setTimeout(carousel, 2000); 
+        }
+      });
+    </script>
+    
+ 
+  <div class="card-container  mt-5">
+      <div class="card mx-5">
+          <img class="img" data-alter-src="images (4).jfif" src="download (10).jfif" alt="Image 1">
+          <div class="card-content">
+              <h3>Card Title 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quaerat incidunt est eum
+                  temporibus, veniam explicabo dolorum nemo corrupti non natus nulla! Earum, fuga commodi est impedit
+                  consequuntur ullam rerum..
+                  <div id="box">
+                    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 1
+                       </p>
+            
+                        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 2
+                           </p>
+      
+      
+                          </div>
+                          <button id="btn">remove</button>
+                        
+                          <button id="btn2">empty</button>
+                </p>
+              
+
+
+          </div>
+      </div>
+      <div class="card mx-5">
+          <img class="img" data-alter-src="images (1).jfif" src="hallstatt-3609863_640.jpg" alt="Image 2">
+          <div class="card-content">
+              <h3>Card Title 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quaerat incidunt est eum
+                  temporibus, veniam explicabo dolorum nemo corrupti non natus nulla! Earum, fuga commodi est impedit
+                  consequuntur ullam rerum..
+                  <div id="box">
+                    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 1
+                       </p>
+            
+                        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 2
+                           </p>
+      
+      
+                          </div>
+                          <button id="btn">remove</button>
+                        
+                          <button id="btn2">empty</button>
+                
+                </p>
+            
+          </div>
+
+
+      </div>
+      <div class="card mx-5">
+          <img class="img" data-alter-src="download (8).jfif" src="download (9).jfif" alt="Image 2">
+          <div class="card-content">
+              <h3>Card Title 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quaerat incidunt est eum
+                  temporibus, veniam explicabo dolorum nemo corrupti non natus nulla! Earum, fuga commodi est impedit
+                  consequuntur ullam rerum..
+                  <div id="box">
+                    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 1
+                       </p>
+            
+                        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 2
+                           </p>
+      
+      
+                          </div>
+                          <button id="btn">remove</button>
+                        
+                          <button id="btn2">empty</button>
+                
+                </p>
+              
+          </div>
+      </div>
+
+
+      <div class="card  mt-5">
+        <img class="img" data-alter-src="download (8).jfif" src="download (9).jfif" alt="Image 2">
+        <div class="card-content">
+            <h3>Card Title 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quaerat incidunt est eum
+                temporibus, veniam explicabo dolorum nemo corrupti non natus nulla! Earum, fuga commodi est impedit
+                consequuntur ullam rerum..
+            
+                <div id="box">
+                    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 1
+                       </p>
+            
+                        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 2
+                           </p>
+      
+      
+                          </div>
+                          <button id="btn">remove</button>
+                        
+                          <button id="btn2">empty</button>
+            </p>
+            
+        </div>
+    </div>
+
+
+
+
+    <div class="card mt-5">
+      <img class="img" data-alter-src="download (8).jfif" src="download (9).jfif" alt="Image 2">
+      <div class="card-content">
+          <h3>Card Title 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quaerat incidunt est eum
+              temporibus, veniam explicabo dolorum nemo corrupti non natus nulla! Earum, fuga commodi est impedit
+              consequuntur ullam rerum..
+            
+              <div id="box">
+                <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 1
+                   </p>
+        
+                    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 2
+                       </p>
+  
+  
+                      </div>
+                      <button id="btn">remove</button>
+                    
+                      <button id="btn2">empty</button>
+            
+            
+            </p>
+        
+      </div>
+  </div>
+
+
+  <div class="card mt-5">
+    <img class="img" data-alter-src="download (8).jfif" src="download (9).jfif" alt="Image 2">
+    <div class="card-content">
+        <h3>Card Title 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quaerat incidunt est eum
+            temporibus, veniam explicabo dolorum nemo corrupti non natus nulla! Earum, fuga commodi est impedit
+            consequuntur ullam rerum..
+          
+            <div id="box">
+              <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 1
+                 </p>
+      
+                  <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore sapiente, sunt, fuga sit official para 2
+                     </p>
+
+
+                    </div>
+                    <button id="btn">remove</button>
+                  
+                    <button id="btn2">empty</button>
+
+          
+          
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+      $(document).ready(function () {
+          $(".card").each(function () {
+              var card = $(this);
+              var image = card.find(".img");
+              var initialSrc = image.attr("src");
+              var altSrc = image.data("alter-src");
+
+              image.click(function () {
+                  var currentSrc = image.attr("src");
+                  var newSrc = (currentSrc === initialSrc) ? altSrc : initialSrc;
+                  image.attr("src", newSrc);
+              });
+          });
+      });
+  </script>
+
+
+    
+
+
+
+   
+<script src="jquery plugin/dist/jquery.validate.min.js"></script>
+    <script src="jquery-3.7.1.min (3).js"></script>
+    <script>
+        $(document).ready(function () {
+    
+            $('#btn').hover (function () {
+                $("#p1").remove();
+            })
+
+            $('#btn1').hover (function () {
+                $("#p2").add("abc")
+            })
+
+            $('#btn2').hover (function () {
+                $("#box").empty();
+            })
+
+
+            $('#btn1').hover (function () {
+                $("#p1").addClass("abc");
+            })
+
+
+            
+        })
+
+
+
+
+
+         $(document).ready(function () {
+        $("#form1").validate({
+            rules: {
+                username: {
+                    required: true,
+                    minlength: 3,
+                    maxlength: 8,
+
+
+                },
+
+
+                Email: {
+                    required: true,
+                    email: true
+                },
+
+
+
+                password: {
+                    required: true,
+                    minlength: 3,
+                    maxlength: 8
+                },
+
+
+
+                confirm_pass: {
+                    required: true,
+                    equalTo: "#password"
+                },
+
+
+            },
+
+         
+       
+
+            messages: {
+                username: {
+                    required: "Name Is Mandatory",
+                    minlength: "please provide atleast 3 letters",
+                    maxlength: "please provide almost 8 letters"
+
+                },
+
+                Email: {
+                    required: "Email Is Mandatory",
+                    email: "Invalid Email"
+
+                },
+
+                password: {
+                    required: "Password is mandatory",
+                    maxlength: "please enter atleast 3 character",
+                    minlength: "no more than 8 characters"
+
+                },
+
+                confirm_pass: {
+                    required: "Password is mandatory",
+                    equalTo: "confirm password must be similar"
+                }
+
+
+
+
+
+
+
+
+            }
+        })
+    })
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-4 mx-auto">
+            <h1>Review Form</h1>
+            <form id="form1" action="">
+                <input type="text" name="username" id="username" placeholder="Enter UserName"
+                    class="form-control mt-5">
+                <br>
+                <input type="email" name="Email" id="Email" placeholder="Enter Email" class="form-control mt-3">
+                <br>
+                <input type="text" name="password" id="password" placeholder="Enter Password"
+                    class="form-control mt-3">
+                <br>
+                <input type="text" name="confirm_pass" id="confirm_pass" placeholder="Confirm password"
+                    class="form-control mt-3">
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<br><br>
+</body>
+
+</html>
